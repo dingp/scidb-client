@@ -29,4 +29,4 @@ RUN echo "[mongodb-org-8.0]"  > /etc/yum.repos.d/mongodb-org-8.0.repo \
  && yum update \
  && yum -y install mongodb-mongosh
 
-ENTRYPOINT ["/bin/bash", "-l", "-c" ]
+ENTRYPOINT ["/bin/bash"]

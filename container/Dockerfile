@@ -8,8 +8,8 @@ RUN yum clean all \
  && dnf config-manager --set-enabled crb \
  && yum clean all
 
-RUN yum -y install 
-    postgresql vim
+RUN yum -y install \
+    postgresql vim \
  && yum clean all
 
 RUN curl -LsSO https://r.mariadb.com/downloads/mariadb_repo_setup \ 

@@ -21,7 +21,7 @@ RUN curl -LsSO https://r.mariadb.com/downloads/mariadb_repo_setup \
  && yum clean all
 
 RUN echo "name=MongoDB Repository" > /etc/yum.repos.d/mongodb-org-8.0.repo \
- && echo "baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/$basearch/" >> /etc/yum.repos.d/mongodb-org-8.0.repo \
+ && echo "baseurl=https://repo.mongodb.org/yum/redhat/\$releasever/mongodb-org/8.0/\$basearch/" >> /etc/yum.repos.d/mongodb-org-8.0.repo \
  && echo "gpgcheck=1" >> /etc/yum.repos.d/mongodb-org-8.0.repo \
  && echo "enabled=1" >> /etc/yum.repos.d/mongodb-org-8.0.repo \
  && echo "gpgkey=https://www.mongodb.org/static/pgp/server-8.0.as" >> /etc/yum.repos.d/mongodb-org-8.0.repo \
